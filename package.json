@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:gh-pages": "ng build --base-href=/packing-recording-landing-page-angular/",
+    "deploy:preview": "npm run build:gh-pages && npx http-server dist/packing-recording-landing-page/browser -p 8080 -o",
+    "deploy:verify": "node verify-deployment.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

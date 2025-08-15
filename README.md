@@ -37,6 +37,12 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
 3. Set source to "GitHub Actions"
 4. The workflow will handle the rest automatically
 
+### Verify Deployment Setup
+Run `npm run deploy:verify` to check if your deployment setup is correctly configured.
+
+### Preview Build Locally
+Run `npm run deploy:preview` to build and preview the GitHub Pages version locally.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
