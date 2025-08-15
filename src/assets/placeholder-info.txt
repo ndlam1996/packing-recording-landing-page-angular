@@ -1,0 +1,17 @@
+Placeholder files for PackingRecorder Landing Page
+
+Bạn cần thêm các file ảnh sau vào thư mục assets:
+
+1. app-mockup.png - Ảnh mockup ứng dụng cho hero section
+2. screenshot-1.png - Ảnh màn hình chính của ứng dụng
+3. screenshot-2.png - Ảnh chế độ quay video
+4. screenshot-3.png - Ảnh quản lý video
+5. screenshot-4.png - Ảnh cài đặt
+6. team-image.jpg - Ảnh đội ngũ phát triển
+
+Kích thước khuyến nghị:
+- app-mockup.png: 600x400px
+- screenshot-*.png: 300x600px (dạng mobile)
+- team-image.jpg: 500x400px
+
+Tất cả ảnh nên có định dạng PNG hoặc JPG, tối ưu hóa cho web.
