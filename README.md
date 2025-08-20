@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Live Demo
 
-🌐 **Live Site**: [https://ndlam1996.github.io/packing-recording-landing-page-angular/](https://ndlam1996.github.io/packing-recording-landing-page-angular/)
+🌐 **Live Site**: [https://quayvideodongdon.com/](https://quayvideodongdon.com/)
 
-This application is automatically deployed to GitHub Pages whenever changes are pushed to the main branch.
+This application is automatically deployed to GitHub Pages with a custom domain whenever changes are pushed to the main branch.
 
 ## Development server
 
@@ -20,22 +20,31 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-For GitHub Pages deployment, use `npm run build:gh-pages` which builds with the correct base href.
+For GitHub Pages deployment with custom domain, use `npm run build:custom-domain` which builds with root path base href.
+
+For GitHub Pages deployment without custom domain, use `npm run build:gh-pages` which builds with the correct subdirectory base href.
 
 ## Deployment to GitHub Pages
 
-This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions with a custom domain.
 
 ### Automatic Deployment
 - Push changes to the `main` branch
-- GitHub Actions will automatically build and deploy the application
-- The site will be available at: https://ndlam1996.github.io/packing-recording-landing-page-angular/
+- GitHub Actions will automatically build and deploy the application using the custom domain configuration
+- The site will be available at: https://quayvideodongdon.com/
+
+### Custom Domain Setup
+The project is configured with:
+- CNAME file pointing to `quayvideodongdon.com`
+- Custom build script `build:custom-domain` that builds with root path (`/`) base href
+- GitHub Actions workflow that uses the custom domain build
 
 ### Manual Setup (if needed)
 1. Go to your repository settings
 2. Navigate to "Pages" section
 3. Set source to "GitHub Actions"
-4. The workflow will handle the rest automatically
+4. Configure custom domain in the Pages settings
+5. The workflow will handle the rest automatically
 
 ## Running unit tests
 
