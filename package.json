@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:gh-pages": "ng build --base-href=/packing-recording-landing-page-angular/",
+    "build:custom-domain": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
