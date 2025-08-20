@@ -14,6 +14,20 @@
       content="quay video đóng hàng, ứng dụng đóng hàng, video packaging, packing app"
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      // Khôi phục deep-link sau khi GitHub Pages 404 redirect về root
+      (function restoreSpaPath() {
+        try {
+          var pending = sessionStorage.getItem('spa_redirect_path');
+          if (pending) {
+            sessionStorage.removeItem('spa_redirect_path');
+            if (pending !== '/' && pending !== '/index.html') {
+              history.replaceState(null, '', pending);
+            }
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>
