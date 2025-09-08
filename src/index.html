@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <title>PackingRecorder - Ứng Dụng Quay Video Đóng Hàng</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Ứng dụng quay video đóng hàng chuyên nghiệp. Giải pháp hoàn hảo để ghi lại quá trình đóng hàng một cách hiệu quả."
-    />
-    <meta
-      name="keywords"
-      content="quay video đóng hàng, ứng dụng đóng hàng, video packaging, packing app"
-    />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <script>
-      // Khôi phục deep-link sau khi GitHub Pages 404 redirect về root
-      (function restoreSpaPath() {
-        try {
-          var pending = sessionStorage.getItem('spa_redirect_path');
-          if (pending) {
-            sessionStorage.removeItem('spa_redirect_path');
-            if (pending !== '/' && pending !== '/index.html') {
-              history.replaceState(null, '', pending);
-            }
+
+<head>
+  <meta charset="utf-8" />
+  <title>CAM CHECK - Ứng Dụng Quay Video Đóng Hàng</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Ứng dụng quay video đóng hàng chuyên nghiệp. Giải pháp hoàn hảo để ghi lại quá trình đóng hàng một cách hiệu quả." />
+  <meta name="keywords" content="quay video đóng hàng, ứng dụng đóng hàng, video packaging, packing app" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script>
+    // Khôi phục deep-link sau khi GitHub Pages 404 redirect về root
+    (function restoreSpaPath() {
+      try {
+        var pending = sessionStorage.getItem('spa_redirect_path');
+        if (pending) {
+          sessionStorage.removeItem('spa_redirect_path');
+          if (pending !== '/' && pending !== '/index.html') {
+            history.replaceState(null, '', pending);
           }
-        } catch (e) { /* ignore */ }
-      })();
-    </script>
-  </head>
-  <body>
-    <app-root></app-root>
-  </body>
+        }
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
 </html>

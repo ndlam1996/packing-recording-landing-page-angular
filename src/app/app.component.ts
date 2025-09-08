@@ -9,5 +9,5 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'PackingRecorder - Ứng Dụng Quay Video Đóng Hàng';
+  title = 'CAM CHECK - Ứng Dụng Quay Video Đóng Hàng';
 }
