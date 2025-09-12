@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,4 +11,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'CAM CHECK - Ứng Dụng Quay Video Đóng Hàng';
+  hideHeader: boolean = false;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParamMap.subscribe(params => {
+      this.hideHeader = params.has('hideHeader');
+    });
+  }
 }
+

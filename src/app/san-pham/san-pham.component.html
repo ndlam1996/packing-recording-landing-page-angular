@@ -1,18 +1,18 @@
 <div class="products-container">
-  <h1>Sản Phẩm</h1>
-  
-  <div class="product-section">
+  <!-- <h1>Sản Phẩm</h1> -->
+
+  @if(!hideHeader){<div class="product-section">
     <div class="product-card main-product">
-      <div class="product-header">
+      <!-- <div class="product-header">
         <h2>CAM CHECK - Ứng Dụng Quay Video Đóng Hàng</h2>
         <span class="product-badge">Sản phẩm chính</span>
-      </div>
-      
-      <div class="product-content">
+      </div> -->
+
+      <!-- <div class="product-content">
         <div class="product-image">
           <img src="assets/image/dashboard.png" alt="CAM CHECK Dashboard" class="main-image">
         </div>
-        
+
         <div class="product-info">
           <h3>Tính năng nổi bật:</h3>
           <ul class="feature-list">
@@ -25,8 +25,8 @@
             <li>📊 Báo cáo thống kê chi tiết</li>
           </ul>
         </div>
-      </div>
-      
+      </div> -->
+
       <div class="pricing-section">
         <h3>Gói dịch vụ:</h3>
         <div class="pricing-cards">
@@ -39,61 +39,58 @@
               <li>Hỗ trợ cơ bản</li>
             </ul>
           </div>
-          
+
           <div class="price-card premium">
             <h4>Gói Premium</h4>
-            <p class="price">Liên hệ</p>
-            <ul>
+            <ul class="premium-pricing-list">
+              <li><strong>99,000₫/tháng</strong></li>
+              <li><strong>6 tháng:</strong> <span class="highlight">79,000₫/tháng</span> <span class="total">Tổng:
+                  474,000₫</span></li>
+              <li><strong>1.188.000₫/năm</strong> → <span class="highlight">49,000₫/tháng</span> (<span
+                  class="total">590.000₫/năm</span>)</li>
+              <li class="save-note">Tiết kiệm <span class="save-percent">50%</span> khi thanh toán năm</li>
+            </ul>
+            <ul class="premium-feature-list">
               <li>Không giới hạn video</li>
-              <li>Lưu trữ cloud</li>
+              <li>Lưu trữ cloud (Sắp ra mắt)</li>
               <li>Hỗ trợ 24/7</li>
               <li>Tùy chỉnh nâng cao</li>
             </ul>
             <span class="trial-badge">30 ngày miễn phí</span>
+            <button class="buy-now-btn" (click)="openContactPopup()">Mua ngay</button>
           </div>
         </div>
       </div>
-      
-      <div class="download-section">
-        <h3>Tải xuống:</h3>
-        <div class="download-buttons">
-          <a href="#" class="download-btn windows">
-            🖥️ Windows 10/11
-          </a>
-          <a href="#" class="download-btn mac">
-            💻 MacOS (Sắp ra mắt)
-          </a>
-        </div>
-      </div>
+
     </div>
-  </div>
-  
+  </div>}
+
   <!-- Product Cards Section -->
   <div class="product-cards-section">
     <h2>Sản phẩm nổi bật</h2>
     <div class="products-grid">
-      <app-product-card 
-        *ngFor="let product of products" 
-        [product]="product">
-      </app-product-card>
+      <app-product-card *ngFor="let product of products" [product]="product"
+        (buyNow)="openContactPopup(product)"></app-product-card>
+    </div>
+
+    <!-- Popup thông tin liên hệ -->
+    <div class="contact-popup" *ngIf="showContactPopup">
+      <div class="popup-content">
+        <button class="close-btn" (click)="closeContactPopup()">×</button>
+        <h3>Liên hệ mua hàng</h3>
+        <div class="contact-list">
+          <a href="https://zalo.me/0363923471" target="_blank" class="contact-item">
+            <img src="assets/logo/zalo-icon.png" alt="Zalo" class="contact-icon" />
+            <span>Zalo: 0363923471</span>
+          </a>
+          <a href="https://www.facebook.com/quayvideodongdon" target="_blank" class="contact-item">
+            <img src="assets/logo/facebook-icon.webp" alt="Facebook" class="contact-icon" />
+            <span>Facebook: CAM CHECK</span>
+          </a>
+        </div>
+      </div>
+      <div class="popup-overlay" (click)="closeContactPopup()"></div>
     </div>
   </div>
-  
-  <div class="support-section">
-    <h2>Hỗ trợ khách hàng</h2>
-    <div class="support-info">
-      <div class="support-item">
-        <h3>📞 Liên hệ</h3>
-        <p>Zalo: 0363923471</p>
-      </div>
-      <div class="support-item">
-        <h3>📧 Email</h3>
-        <p>support&#64;camcheck.com</p>
-      </div>
-      <div class="support-item">
-        <h3>🕒 Thời gian hỗ trợ</h3>
-        <p>8:00 - 22:00 (T2-CN)</p>
-      </div>
-    </div>
-  </div>
+
 </div>

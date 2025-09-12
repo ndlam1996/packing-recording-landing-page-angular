@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Product {
@@ -31,9 +31,10 @@ export class ProductCardComponent {
     return Array(5).fill(0).map((_, i) => i < this.product.rating ? 1 : 0);
   }
 
+  @Output() buyNow = new EventEmitter<Product>();
+
   onBuyNow(): void {
-    // Logic mua ngay
-    console.log('Mua ngay sản phẩm:', this.product.name);
+    this.buyNow.emit(this.product);
   }
 
   onGoToShopee(): void {
