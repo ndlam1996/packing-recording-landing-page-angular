@@ -1,0 +1,87 @@
+.support-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 40px 0;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.support-section h3 {
+    color: #1976d2;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.support-section p {
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.support-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 200px;
+}
+
+.support-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: #1976d2;
+    color: #1976d2;
+}
+
+.button-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .support-section {
+        padding: 32px 20px;
+        margin: 32px 0;
+    }
+
+    .support-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .support-section p {
+        font-size: 1rem;
+    }
+}

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent, Product } from '../product-card/product-card.component';
 import { ActivatedRoute } from '@angular/router';
+import { SupportContactComponent } from '../support-contact/support-contact.component';
 
 @Component({
   selector: 'app-san-pham',
   standalone: true,
-  imports: [CommonModule, ProductCardComponent],
+  imports: [CommonModule, ProductCardComponent, SupportContactComponent],
   templateUrl: './san-pham.component.html',
   styleUrl: './san-pham.component.scss'
 })
