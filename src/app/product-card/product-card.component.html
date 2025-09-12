@@ -1,0 +1,39 @@
+<div class="product-card">
+  <div class="product-image">
+    <img [src]="product.image" [alt]="product.name" class="product-img">
+    <div class="discount-badge" *ngIf="product.fakePrice > product.realPrice">
+      -{{Math.round((1 - product.realPrice/product.fakePrice) * 100)}}%
+    </div>
+  </div>
+  
+  <div class="product-info">
+    <h3 class="product-name">{{product.name}}</h3>
+    
+    <div class="price-section">
+      <span class="real-price">{{formatPrice(product.realPrice)}}</span>
+      <span class="fake-price" *ngIf="product.fakePrice > product.realPrice">{{formatPrice(product.fakePrice)}}</span>
+    </div>
+    
+    <div class="product-stats">
+      <div class="rating">
+        <span class="star" *ngFor="let star of getStars(); let i = index" 
+              [class.filled]="star === 1">★</span>
+        <span class="rating-text">({{product.rating}}/5)</span>
+      </div>
+      
+      <div class="sold-count">
+        <span>Đã bán: {{product.soldCount}}</span>
+      </div>
+    </div>
+    
+    <div class="action-buttons">
+      <button class="btn-buy-now" (click)="onBuyNow()">
+        Mua Ngay
+      </button>
+      
+      <button class="btn-shopee" (click)="onGoToShopee()">
+        Xem trên Shopee
+      </button>
+    </div>
+  </div>
+</div>
