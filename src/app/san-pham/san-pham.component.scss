@@ -3,6 +3,7 @@
   margin: 40px auto;
   padding: 20px;
   font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
 }
 
 .products-container h1 {
@@ -89,6 +90,7 @@
 
 .pricing-section {
   margin: 32px 0;
+  text-align: center;
 }
 
 .pricing-section h3 {
@@ -101,6 +103,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .price-card {
@@ -242,7 +247,7 @@
 }
 
 .product-cards-section {
-  margin: 60px 0;
+  // margin: 60px 0;
   text-align: center;
 }
 
