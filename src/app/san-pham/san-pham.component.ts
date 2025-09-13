@@ -52,7 +52,7 @@ export class SanPhamComponent {
     {
       id: 4,
       name: 'Giá Đỡ Điện Thoại, Webcam Cao 1m7 Kèm Đèn LED Vòng 20cm',
-      image: 'assets/image/products/webcam.png',
+      image: 'assets/image/products/Gia-do.png',
       realPrice: 799000,
       fakePrice: 1599000,
       soldCount: 432,
