@@ -254,6 +254,12 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .price-card {
+    min-width: unset;
+  }
+}
+
 .product-cards-section {
   // margin: 60px 0;
   text-align: center;

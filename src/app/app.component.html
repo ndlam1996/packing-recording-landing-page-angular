@@ -6,13 +6,21 @@
 				<div class="nav-brand">
 					<h2>CAM CHECK</h2>
 				</div>
-				<div class="nav-menu">
-					<a href="#home" class="nav-link">Trang chủ</a>
-					<a href="#features" class="nav-link">Tính năng</a>
-					<a href="#about" class="nav-link">Về chúng tôi</a>
-					<a href="#download" class="nav-link">Tải xuống</a>
-					<a routerLink="/blogs" class="nav-link">Hướng dẫn</a>
-					<a routerLink="/san-pham" class="nav-link">Sản Phẩm</a>
+
+				<!-- Hamburger menu button for mobile -->
+				<button class="mobile-menu-btn" (click)="toggleMenu()" [class.active]="isMenuOpen">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<div class="nav-menu" [class.active]="isMenuOpen">
+					<a href="#home" class="nav-link" (click)="closeMenu()">Trang chủ</a>
+					<a href="#features" class="nav-link" (click)="closeMenu()">Tính năng</a>
+					<a href="#about" class="nav-link" (click)="closeMenu()">Về chúng tôi</a>
+					<a href="#download" class="nav-link" (click)="closeMenu()">Tải xuống</a>
+					<a routerLink="/blogs" class="nav-link" (click)="closeMenu()">Hướng dẫn</a>
+					<a routerLink="/san-pham" class="nav-link" (click)="closeMenu()">Sản Phẩm</a>
 				</div>
 			</div>
 		</nav>

@@ -12,11 +12,20 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'CAM CHECK - Ứng Dụng Quay Video Đóng Hàng';
   hideHeader: boolean = false;
+  isMenuOpen: boolean = false;
 
   constructor(private route: ActivatedRoute) {
     this.route.queryParamMap.subscribe(params => {
       this.hideHeader = params.has('hideHeader');
     });
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
 }
 
