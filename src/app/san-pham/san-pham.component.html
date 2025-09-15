@@ -46,8 +46,8 @@
               <li><strong>99,000₫/tháng</strong></li>
               <li><strong>6 tháng:</strong> <span class="highlight">79,000₫/tháng</span> <span class="total">Tổng:
                   474,000₫</span></li>
-              <li><strong>1.188.000₫/năm</strong> → <span class="highlight">49,000₫/tháng</span> (<span
-                  class="total">590.000₫/năm</span>)</li>
+              <li><strong class="original-price">1.188.000₫/năm</strong> → <span class="highlight">49,000₫/tháng</span>
+                (<span class="total">590.000₫/năm</span>)</li>
               <li class="save-note">Tiết kiệm <span class="save-percent">50%</span> khi thanh toán năm</li>
             </ul>
             <ul class="premium-feature-list">
@@ -87,6 +87,26 @@
             <img src="assets/logo/facebook-icon.webp" alt="Facebook" class="contact-icon" />
             <span>Facebook: CAM CHECK</span>
           </a>
+          @if(selectedProduct?.shopeeLink){ <div class="shopee-row">
+            <a [href]="selectedProduct?.shopeeLink" target="_blank" class="contact-item shopee">
+              <img src="assets/logo/shopee-logo.jpg" alt="Shopee" class="contact-icon" />
+              <span>Shopee: CAM CHECK</span>
+              <button class="copy-btn" (click)="copyShopeeLink($event)" [class.copied]="isCopied"
+                (mouseenter)="showTooltip = true" (mouseleave)="showTooltip = false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="copy-icon">
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                </svg>
+              </button>
+            </a>
+          </div>}
+        </div>
+
+        <!-- Tooltip ngoài thẻ a -->
+        <div class="copy-tooltip" *ngIf="showTooltip || isCopied" [class.copied]="isCopied">
+          {{isCopied ? 'Đã copy!' : 'Copy link'}}
         </div>
       </div>
       <div class="popup-overlay" (click)="closeContactPopup()"></div>
