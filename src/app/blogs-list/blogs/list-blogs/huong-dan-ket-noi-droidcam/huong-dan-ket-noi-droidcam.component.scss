@@ -1,0 +1,388 @@
+.droidcam-guide-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.guide-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.guide-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.guide-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Section Styling */
+.step-section,
+.intro-section,
+.troubleshooting-section,
+.conclusion-section {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e3e9f3;
+}
+
+.step-section h2,
+.intro-section h2,
+.troubleshooting-section h2,
+.conclusion-section h2 {
+    color: #1976d2;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 24px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.benefit-item h3 {
+    color: #1976d2;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.benefit-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Step Content */
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.step-item {
+    background: #f8f9fa;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #1976d2;
+}
+
+.step-item h3 {
+    color: #1976d2;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+}
+
+.step-item ul,
+.step-item ol {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.step-item li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.step-item strong {
+    color: #1976d2;
+    font-weight: 600;
+}
+
+/* Download Links */
+.download-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 180px;
+}
+
+.download-btn.android {
+    background: #4CAF50;
+    color: white;
+}
+
+.download-btn.android:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.download-btn.ios {
+    background: #007AFF;
+    color: white;
+}
+
+.download-btn.ios:hover {
+    background: #0056CC;
+    transform: translateY(-2px);
+}
+
+.download-btn.windows {
+    background: #0078D4;
+    color: white;
+}
+
+.download-btn.windows:hover {
+    background: #106ebe;
+    transform: translateY(-2px);
+}
+
+/* Connection Method */
+.connection-method {
+    background: #e3f2fd;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #90caf9;
+}
+
+.connection-method h3 {
+    color: #1565c0;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+}
+
+.connection-method ol,
+.connection-method ul {
+    margin-left: 20px;
+}
+
+.connection-method li {
+    margin-bottom: 8px;
+    color: #424242;
+}
+
+/* Tip and Warning Boxes */
+.tip-box,
+.warning-box {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.tip-box {
+    background: #e8f5e8;
+    border-left-color: #4CAF50;
+}
+
+.tip-box h4 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.warning-box {
+    background: #fff3e0;
+    border-left-color: #ff9800;
+}
+
+.warning-box h4 {
+    color: #e65100;
+    margin-bottom: 8px;
+}
+
+/* Settings Grid */
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.setting-item {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #c8e6c9;
+}
+
+.setting-item h3 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.setting-item ul {
+    margin-left: 16px;
+}
+
+.setting-item li {
+    margin-bottom: 6px;
+    color: #424242;
+}
+
+/* FAQ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.faq-item h3 {
+    color: #d32f2f;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.faq-item ul {
+    margin-left: 16px;
+}
+
+.faq-item li {
+    margin-bottom: 6px;
+    color: #424242;
+}
+
+/* Use Cases */
+.use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.use-case {
+    background: #e8f5e8;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Support Note */
+.support-note {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.support-note p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .droidcam-guide-container {
+        padding: 15px;
+    }
+
+    .guide-header {
+        padding: 30px 20px;
+    }
+
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+
+    .guide-subtitle {
+        font-size: 1rem;
+    }
+
+    .step-section,
+    .intro-section,
+    .troubleshooting-section,
+    .conclusion-section {
+        padding: 20px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-links {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .use-cases {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .step-section h2,
+    .intro-section h2,
+    .troubleshooting-section h2,
+    .conclusion-section h2 {
+        font-size: 1.5rem;
+    }
+}

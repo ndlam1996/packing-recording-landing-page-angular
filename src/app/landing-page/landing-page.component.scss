@@ -344,11 +344,35 @@ body {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+  margin-bottom: 12px;
 }
 
 .btn-download:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
+}
+
+.btn-backup {
+  background: #6c757d;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn-backup:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  color: var(--white);
 }
 
 .download-icon {
@@ -606,11 +630,9 @@ body {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: linear-gradient(
-            135deg,
-            var(--primary-color),
-            var(--accent-color)
-          );
+          background: linear-gradient(135deg,
+              var(--primary-color),
+              var(--accent-color));
           display: flex;
           align-items: center;
           justify-content: center;
@@ -662,11 +684,9 @@ body {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--accent-color)
-        );
+        background: linear-gradient(135deg,
+            var(--primary-color),
+            var(--accent-color));
         display: flex;
         align-items: center;
         justify-content: center;
