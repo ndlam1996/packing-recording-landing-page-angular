@@ -311,6 +311,13 @@ body {
   margin-bottom: 1rem;
 }
 
+.platform-icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: inline-block;
+}
+
 .download-card h3 {
   font-size: 1.8rem;
   color: var(--text-dark);
