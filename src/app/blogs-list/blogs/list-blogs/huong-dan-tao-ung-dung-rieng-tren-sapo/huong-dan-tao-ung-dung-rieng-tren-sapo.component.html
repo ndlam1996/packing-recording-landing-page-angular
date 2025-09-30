@@ -1,0 +1,145 @@
+<div class="huong-dan-container">
+    <header class="huong-dan-header">
+        <h1>Hướng dẫn tạo và kết nối Ứng dụng riêng (Private App) trên Sapo</h1>
+        <p class="subtitle">Tạo một private app trên Sapo và kết nối với Cam Check để đồng bộ đơn hàng tự động.</p>
+    </header>
+
+    <div class="content-wrapper">
+        <aside class="toc-sidebar">
+            <div class="toc-container">
+                <h3>Mục Lục</h3>
+                <ul class="toc-list">
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo#overview">Tổng quan</a></li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo#create">1. Thêm mới ứng dụng riêng</a>
+                    </li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo#edit">2. Sửa ứng dụng riêng</a></li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo#connect">3. Kết nối với Cam Check</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="huong-dan-content">
+            <section id="overview" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">🔌</div>
+                    <h2>Tổng quan</h2>
+                </div>
+                <div class="section-content">
+                    <p>Ứng dụng riêng (Private App) cho phép bạn tạo khoá API để ứng dụng bên ngoài truy cập dữ liệu của
+                        cửa hàng trên Sapo. Thông thường private app dùng để đồng bộ đơn hàng, sản phẩm hoặc khách hàng
+                        giữa Sapo và hệ thống nội bộ (ví dụ: Cam Check).</p>
+                    <div class="note-box">
+                        <p><strong>Lưu ý:</strong> Không chia sẻ <strong>API Key</strong> và <strong>API Secret</strong>
+                            công
+                            khai. Những thông tin này có quyền truy cập vào dữ liệu cửa hàng của bạn.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="create" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">➕</div>
+                    <h2>1. Thêm mới Ứng dụng riêng</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Bước 1:</strong> Đăng nhập vào trang quản trị Sapo và chọn <strong>Ứng dụng</strong> từ
+                        menu bên trái.</p>
+                    <div class="image-container">
+                        <img src="assets/image/sapo/init-ung-dung-rieng.png" alt="Truy cập Ứng dụng"
+                            class="guide-image">
+                        <p class="image-caption">Mở phần Ứng dụng trong trang quản trị Sapo</p>
+                    </div>
+
+                    <p><strong>Bước 2:</strong>Chọn
+                        <strong>Ứng dụng riêng</strong>, sau đó nhấn <strong>Tạo ứng dụng riêng</strong>.
+                    </p>
+
+                    <p><strong>Bước 3:</strong> Điền <strong>Tên ứng dụng</strong> và <strong>Email liên hệ</strong>,
+                        sau
+                        đó phân quyền cho ứng dụng.</p>
+
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3>Quyền truy cập</h3>
+                            <p>Chọn quyền phù hợp cho từng nhóm dữ liệu (Không cho phép / Chỉ đọc / Đọc và ghi).</p>
+                        </div>
+                        <div class="feature-item highlight-feature">
+                            <h3>Gợi ý cho Cam Check</h3>
+                            <p>Chỉ cần <strong>Chỉ đọc</strong> cho mục <em>Đơn hàng, giao dịch và vận chuyển</em> để
+                                Cam Check có thể lấy dữ liệu đơn hàng.</p>
+                        </div>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="assets/image/sapo/phan-quyen.png" alt="Phân quyền ứng dụng" class="guide-image">
+                        <p class="image-caption">Phân quyền khi tạo ứng dụng riêng</p>
+                    </div>
+
+                    <p><strong>Bước 4:</strong> Nhấn <strong>Lưu</strong>. Sau khi lưu, hệ thống sẽ hiển thị <strong>API
+                            Key</strong> và <strong>API Secret</strong> — ghi lại cẩn thận để cấu hình ở Cam Check.</p>
+
+                    <p class="note-box"><strong>Ví dụ URL truy cập API</strong>:
+                        <code>https://apikey:apisecret&#64;hostname/admin/resource.json</code>
+                    </p>
+                </div>
+            </section>
+
+            <section id="edit" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">✏️</div>
+                    <h2>2. Sửa Ứng dụng riêng</h2>
+                </div>
+                <div class="section-content">
+                    <p>Trong danh sách ứng dụng riêng, chọn ứng dụng cần chỉnh sửa để cập nhật tên, email liên hệ hoặc
+                        quyền truy cập. Sau khi chỉnh sửa, chọn <strong>Lưu</strong>.</p>
+                    <p class="note-box warning">Lưu ý: API Key và API Secret sẽ không thay đổi khi bạn chỉ cập nhật
+                        quyền hoặc tên ứng dụng.</p>
+                </div>
+            </section>
+
+            <section id="connect" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">🔗</div>
+                    <h2>3. Kết nối Sapo với Cam Check</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Bước 1:</strong> Mở Cam Check tại <a href="https://app.quayvideodongdon.com/"
+                            target="_blank" rel="noopener" class="guide-link">app.quayvideodongdon.com</a> và đăng nhập.
+                    </p>
+
+                    <p><strong>Bước 2:</strong> Vào <strong>Cài đặt</strong> (Settings) trên sidebar, kéo xuống phần
+                        <strong>Kết nối nền tảng bán hàng</strong>.
+                    </p>
+                    <div class="image-container">
+                        <img src="assets/image/sapo/cai-dat-link-sapo.png" alt="Kết nối nền tảng bán hàng"
+                            class="guide-image">
+                        <p class="image-caption">Kết nối nền tảng bán hàng Sapo</p>
+                    </div>
+
+                    <p><strong>Bước 3:</strong> Chọn <strong>Sapo</strong> từ danh sách nền tảng. Điền thông tin <b>URL
+                            Shop</b>(url vào sapo shop của bạn, có thể copy nhanh trên thanh địa chỉ), <b>API Key</b> và
+                        <b>API Secret</b> lấy từ bước tạo ứng dụng riêng trên Sapo, sau
+                        đó lưu lại.
+                    </p>
+
+                    <div class="note-box">
+                        <p>Nếu kết nối thành công, Cam Check sẽ đồng bộ thông tin sản phẩm từ đơn hàng Sapo, giúp bạn
+                            kiểm tra số sản phẩm đơn hàng trong video đóng đơn tự động.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/image/sapo/quay-video.png" alt="Quay video đóng đơn" class="guide-image">
+                        <p class="image-caption">Quay video đóng đơn kèm danh sách sản phẩm đơn hàng</p>
+                    </div>
+                </div>
+            </section>
+
+            <app-support-contact></app-support-contact>
+
+            <!-- <div class="source-box">
+                <p class="source">Nguồn hướng dẫn: <a href="https://support.sapo.vn/ung-dung-rieng-private-apps"
+                        target="_blank" rel="noopener">https://support.sapo.vn/ung-dung-rieng-private-apps</a></p>
+            </div> -->
+        </main>
+    </div>
+</div>
