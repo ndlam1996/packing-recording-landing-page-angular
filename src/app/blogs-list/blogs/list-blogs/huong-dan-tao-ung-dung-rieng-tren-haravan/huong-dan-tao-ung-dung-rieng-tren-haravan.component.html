@@ -1,0 +1,120 @@
+<div class="huong-dan-container">
+    <header class="huong-dan-header">
+        <h1>Hướng dẫn tạo ứng dụng riêng trên Haravan</h1>
+        <p class="subtitle">Tạo một private app trên Haravan và kết nối với Cam Check để đồng bộ đơn hàng.</p>
+    </header>
+
+    <div class="content-wrapper">
+        <aside class="toc-sidebar">
+            <div class="toc-container">
+                <h3>Mục Lục</h3>
+                <ul class="toc-list">
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan#overview">Tổng quan</a></li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan#create">1. Thêm mới ứng dụng riêng</a>
+                    </li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan#edit">2. Sửa ứng dụng riêng</a></li>
+                    <li><a href="/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan#connect">3. Kết nối với Cam Check</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="huong-dan-content">
+            <section id="overview" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">🔌</div>
+                    <h2>Tổng quan</h2>
+                </div>
+                <div class="section-content">
+                    <p>Private app trên Haravan cho phép bạn cấp Token để kết nối hệ thống bên ngoài với cửa hàng
+                        Haravan của bạn—thường dùng để đồng bộ đơn hàng, sản phẩm và khách hàng.</p>
+                    <div class="note-box">
+                        <p><strong>Lưu ý:</strong> Bảo mật Token; chỉ cung cấp cho những hệ thống tin cậy.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="create" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">➕</div>
+                    <h2>1. Thêm mới Ứng dụng riêng</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Bước 1:</strong> Đăng nhập vào trang quản trị Haravan và tìm mục <strong>Ứng
+                            dụng</strong>.</p>
+                    <p><strong>Bước 2:</strong> Chọn <strong>Ứng dụng riêng ở góc phải trên màn hình</strong></p>
+                    <div class="image-container">
+                        <img src="assets/image/haravan/ung-dung.png" alt="Quay video đóng đơn" class="guide-image">
+                        <p class="image-caption">Truy cập ứng dụng riêng</p>
+                    </div>
+                    <p><strong>Bước 2:</strong> Chọn <strong>Tạo ứng dụng riêng</strong>.</p>
+                    <div class="image-container">
+                        <img src="assets/image/haravan/new-private-app.png" alt="Quay video đóng đơn"
+                            class="guide-image">
+                        <p class="image-caption">Tạo ứng dụng riêng</p>
+                    </div>
+                    <p><strong>Bước 3:</strong> Điền tên ứng dụng sau đó phân quyền cho ứng dụng.</p>
+
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3>Quyền truy cập</h3>
+                            <p>Chọn quyền phù hợp: Không cho phép / Chỉ đọc / Đọc và ghi cho từng nhóm dữ liệu.</p>
+                        </div>
+                        <div class="feature-item highlight-feature">
+                            <h3>Gợi ý cho Cam Check</h3>
+                            <p>Chỉ cấp <strong>Chỉ đọc</strong> cho <em>Đơn hàng</em> để Cam Check có thể đọc dữ liệu
+                                đơn hàng.</p>
+                        </div>
+                    </div>
+
+                    <p><strong>Bước 4:</strong> Tạo ứng dụng riêng sau đó vào ứng dụng để lấy Token.</p>
+                    <div class="image-container">
+                        <img src="assets/image/haravan/my-private-app.png" alt="Quay video đóng đơn"
+                            class="guide-image">
+                        <p class="image-caption">Ứng dụng riêng</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="connect" class="guide-section">
+                <div class="section-header">
+                    <div class="section-icon">🔗</div>
+                    <h2>3. Kết nối Haravan với Cam Check</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Bước 1:</strong> Mở Cam Check tại <a href="https://app.quayvideodongdon.com/"
+                            target="_blank" rel="noopener" class="guide-link">app.quayvideodongdon.com</a> và đăng nhập.
+                    </p>
+
+                    <p><strong>Bước 2:</strong> Vào <strong>Cài đặt</strong> → <strong>Kết nối nền tảng bán
+                            hàng</strong>.</p>
+
+                    <p><strong>Bước 3:</strong> Chọn <strong>Haravan</strong>, sau đó dán <strong>Token</strong> từ
+                        Haravan vào form kết nối và lưu.
+                    </p>
+                    <div class="image-container">
+                        <img src="assets/image/haravan/setup-camcheck.png" alt="Quay video đóng đơn"
+                            class="guide-image">
+                        <p class="image-caption">Ứng dụng riêng</p>
+                    </div>
+                    <div class="note-box">
+                        <p>Khi kết nối thành công, Cam Check sẽ đồng bộ đơn hàng từ Haravan để tạo video đóng đơn tự
+                            động.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/image/sapo/quay-video.png" alt="Quay video đóng đơn" class="guide-image">
+                        <p class="image-caption">Quay video đóng đơn kèm danh sách sản phẩm đơn hàng</p>
+                    </div>
+                </div>
+            </section>
+
+            <app-support-contact></app-support-contact>
+
+            <!-- <div class="source-box">
+                <p class="source">Nguồn hướng dẫn: <a href="https://help.haravan.com/" target="_blank"
+                        rel="noopener">https://help.haravan.com/</a></p>
+            </div> -->
+        </main>
+    </div>
+</div>

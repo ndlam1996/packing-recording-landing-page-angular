@@ -7,6 +7,7 @@ import { HuongDanCaiDatComponent } from './blogs-list/blogs/list-blogs/huong-dan
 import { HuongDanSuDungComponent } from './blogs-list/blogs/list-blogs/huong-dan-su-dung/huong-dan-su-dung.component';
 import { HuongDanKetNoiDroidcamComponent } from './blogs-list/blogs/list-blogs/huong-dan-ket-noi-droidcam/huong-dan-ket-noi-droidcam.component';
 import { HuongDanTaoUngDungRiengTrenSapoComponent } from './blogs-list/blogs/list-blogs/huong-dan-tao-ung-dung-rieng-tren-sapo/huong-dan-tao-ung-dung-rieng-tren-sapo.component';
+import { HuongDanTaoUngDungRiengTrenHaravanComponent } from './blogs-list/blogs/list-blogs/huong-dan-tao-ung-dung-rieng-tren-haravan/huong-dan-tao-ung-dung-rieng-tren-haravan.component';
 import { SanPhamComponent } from './san-pham/san-pham.component';
 
 export const routes: Routes = [
@@ -57,6 +58,13 @@ export const routes: Routes = [
       title: 'Hướng dẫn tạo ứng dụng riêng trên Sapo',
       description: 'Cách tạo và sử dụng ứng dụng riêng (Private Apps) trên Sapo Web để kết nối API và tự động hóa dữ liệu.',
       path: '/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo'
+    }
+  },
+  {
+    path: 'blogs/huong-dan-tao-ung-dung-rieng-tren-haravan', component: HuongDanTaoUngDungRiengTrenHaravanComponent, data: {
+      title: 'Hướng dẫn tạo ứng dụng riêng trên Haravan',
+      description: 'Cách tạo và sử dụng ứng dụng riêng (Private Apps) trên Haravan để kết nối API và tự động hóa đơn hàng.',
+      path: '/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan'
     }
   },
   {
