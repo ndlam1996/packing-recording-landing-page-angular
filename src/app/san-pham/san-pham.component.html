@@ -2,10 +2,15 @@
   <!-- <h1>Sản Phẩm</h1> -->
 
   @if(!hideHeader){<div class="product-section">
+    <div class="section-head">
+      <p class="eyebrow">Gói dịch vụ</p>
+      <h2>Chọn gói phù hợp theo quy mô đơn hàng</h2>
+      <p>Miễn phí 5GB lưu trữ video. Có tùy chọn nâng cao cho shop nhiều đơn hàng cần thêm dung lượng.</p>
+    </div>
     <div class="product-card main-product">
 
       <div class="pricing-section">
-        <h3>Gói dịch vụ:</h3>
+        <h3>Bảng giá linh hoạt</h3>
         <div class="pricing-cards">
           <div class="price-card">
             <h4>Gói Free</h4>
@@ -68,7 +73,11 @@
 
   <!-- Product Cards Section -->
   <div class="product-cards-section">
-    <h2>Sản phẩm nổi bật</h2>
+    <div class="section-head">
+      <p class="eyebrow">Thiết bị hỗ trợ</p>
+      <h2>Sản phẩm nổi bật</h2>
+      <p>Chọn thiết bị phù hợp để triển khai quy trình quay video đóng hàng nhanh chóng.</p>
+    </div>
     <div class="products-grid">
       <app-product-card *ngFor="let product of products" [product]="product"
         (buyNow)="openContactPopup(product)"></app-product-card>
