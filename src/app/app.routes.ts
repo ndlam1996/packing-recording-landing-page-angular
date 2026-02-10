@@ -6,6 +6,7 @@ import { BlogsComponent } from './blogs-list/blogs/blogs.component';
 import { HuongDanCaiDatComponent } from './blogs-list/blogs/list-blogs/huong-dan-cai-dat/huong-dan-cai-dat.component';
 import { HuongDanSuDungComponent } from './blogs-list/blogs/list-blogs/huong-dan-su-dung/huong-dan-su-dung.component';
 import { HuongDanKetNoiDroidcamComponent } from './blogs-list/blogs/list-blogs/huong-dan-ket-noi-droidcam/huong-dan-ket-noi-droidcam.component';
+import { HuongDanQuayVideoDongHangShopee2026Component } from './blogs-list/blogs/list-blogs/huong-dan-quay-video-dong-hang-shopee-2026/huong-dan-quay-video-dong-hang-shopee-2026.component';
 import { HuongDanTaoUngDungRiengTrenSapoComponent } from './blogs-list/blogs/list-blogs/huong-dan-tao-ung-dung-rieng-tren-sapo/huong-dan-tao-ung-dung-rieng-tren-sapo.component';
 import { HuongDanTaoUngDungRiengTrenHaravanComponent } from './blogs-list/blogs/list-blogs/huong-dan-tao-ung-dung-rieng-tren-haravan/huong-dan-tao-ung-dung-rieng-tren-haravan.component';
 import { SanPhamComponent } from './san-pham/san-pham.component';
@@ -273,6 +274,24 @@ export const routes: Routes = [
           description: 'Biến điện thoại thành webcam cho máy tính bằng DroidCam: WiFi/USB, tối ưu chất lượng.',
           mainEntityOfPage: `${baseUrl}/blogs/huong-dan-ket-noi-droidcam`,
           url: `${baseUrl}/blogs/huong-dan-ket-noi-droidcam`
+        }
+      ]
+    }
+  },
+  {
+    path: 'blogs/huong-dan-quay-video-dong-hang-shopee-2026', component: HuongDanQuayVideoDongHangShopee2026Component, data: {
+      title: 'Hướng dẫn quay video đóng hàng Shopee chuẩn nhất 2026',
+      description: 'Checklist và quy trình quay video đóng gói giúp giảm rủi ro khiếu nại trên Shopee năm 2026.',
+      path: '/blogs/huong-dan-quay-video-dong-hang-shopee-2026',
+      image: ogImage,
+      structuredData: [
+        organizationJsonLd,
+        {
+          ...blogPostingBase,
+          headline: 'Hướng dẫn quay video đóng hàng Shopee chuẩn nhất 2026',
+          description: 'Checklist và quy trình quay video đóng gói giúp giảm rủi ro khiếu nại trên Shopee năm 2026.',
+          mainEntityOfPage: `${baseUrl}/blogs/huong-dan-quay-video-dong-hang-shopee-2026`,
+          url: `${baseUrl}/blogs/huong-dan-quay-video-dong-hang-shopee-2026`
         }
       ]
     }
