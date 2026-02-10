@@ -31,7 +31,8 @@ export class AppComponent {
           description: data?.description,
           path: data?.path,
           image: data?.image,
-          imageAlt: data?.imageAlt
+          imageAlt: data?.imageAlt,
+          structuredData: data?.structuredData
         });
       });
   }

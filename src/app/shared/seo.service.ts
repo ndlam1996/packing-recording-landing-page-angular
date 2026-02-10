@@ -8,6 +8,7 @@ export interface SeoConfig {
     path?: string; // canonical path like '/san-pham'
     image?: string; // absolute URL or absolute path like '/assets/og/og-image.jpg'
     imageAlt?: string; // alt text for the share image
+    structuredData?: Array<Record<string, unknown>> | Record<string, unknown>;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -28,6 +29,9 @@ export class SeoService {
         const defaultImagePath = '/assets/og/og-image.jpg';
         const imageUrl = this.toAbsoluteUrlFromPathOrAbsolute(config.image ?? defaultImagePath);
         const imageAlt = config.imageAlt ?? `${this.siteName} - ${title}`;
+        const structuredData = Array.isArray(config.structuredData)
+            ? config.structuredData
+            : (config.structuredData ? [config.structuredData] : []);
 
         this.title.setTitle(title);
 
@@ -53,6 +57,9 @@ export class SeoService {
 
         // Canonical
         this.setCanonical(url);
+
+        // Structured Data
+        this.setStructuredData(structuredData);
     }
 
     setCanonical(url: string) {
@@ -79,5 +86,20 @@ export class SeoService {
         }
         // Treat as absolute path on the same domain
         return this.toAbsoluteUrl(pathOrUrl.startsWith('/') ? pathOrUrl : '/' + pathOrUrl);
+    }
+
+    private setStructuredData(entries: Array<Record<string, unknown>>) {
+        const existing = Array.from(this.doc.head.querySelectorAll('script[data-seo-jsonld="true"]'));
+        existing.forEach((el) => el.remove());
+
+        if (!entries || entries.length === 0) return;
+
+        entries.forEach((entry) => {
+            const script = this.doc.createElement('script');
+            script.type = 'application/ld+json';
+            script.setAttribute('data-seo-jsonld', 'true');
+            script.text = JSON.stringify(entry);
+            this.doc.head.appendChild(script);
+        });
     }
 }

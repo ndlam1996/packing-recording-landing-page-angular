@@ -15,4 +15,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://quayvideodongdon.com/blogs/huong-dan-cai-dat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quayvideodongdon.com/blogs/huong-dan-su-dung</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quayvideodongdon.com/blogs/huong-dan-ket-noi-droidcam</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quayvideodongdon.com/blogs/huong-dan-tao-ung-dung-rieng-tren-sapo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quayvideodongdon.com/blogs/huong-dan-tao-ung-dung-rieng-tren-haravan</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://quayvideodongdon.com/verify-success</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
 </urlset>
