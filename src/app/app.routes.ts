@@ -199,7 +199,7 @@ const blogPostingBase = {
 export const routes: Routes = [
   {
     path: '', component: LandingPageComponent, data: {
-      title: 'CAM CHECK - Quay video đóng đơn tự động | Bảo vệ người bán',
+      title: 'CAM CHECK - Quay video đóng đơn tự động miễn phí | Bảo vệ người bán',
       description: 'Quay video đóng đơn tự động theo mã vận đơn, tra cứu nhanh, giảm khiếu nại >90%. Dùng miễn phí trên web.',
       path: '/',
       image: ogImage,

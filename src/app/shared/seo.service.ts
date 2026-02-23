@@ -23,7 +23,7 @@ export class SeoService {
     ) { }
 
     update(config: SeoConfig) {
-        const title = config.title ?? 'CAM CHECK - Quay video đóng đơn tự động | Bảo vệ người bán';
+        const title = config.title ?? 'CAM CHECK - Quay video đóng đơn tự động miễn phí | Bảo vệ người bán';
         const description = config.description ?? 'CAM CHECK giúp quay video đóng đơn tự động theo mã vận đơn, lưu chứng cứ rõ ràng, tra cứu nhanh, giảm khiếu nại trên 90%. Dùng miễn phí trên web.';
         const url = this.toAbsoluteUrl(config.path ?? '/');
         const defaultImagePath = '/assets/og/og-image.jpg';
