@@ -24,7 +24,7 @@ export class AppComponent {
     // Update SEO on navigation based on route data
     this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
-      .subscribe(() => {
+      .subscribe((event: NavigationEnd) => {
         const data = this.getDeepestChild(this.route).snapshot.data as any;
         this.seo.update({
           title: data?.title,
@@ -34,6 +34,15 @@ export class AppComponent {
           imageAlt: data?.imageAlt,
           structuredData: data?.structuredData
         });
+
+        // Track SPA page navigation in GA4
+        const gtag = (window as any)['gtag'];
+        if (typeof gtag === 'function') {
+          gtag('event', 'page_view', {
+            page_path: event.urlAfterRedirects,
+            page_title: data?.title ?? document.title,
+          });
+        }
       });
   }
 
